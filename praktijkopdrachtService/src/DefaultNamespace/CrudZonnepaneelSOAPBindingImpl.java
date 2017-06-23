@@ -98,13 +98,13 @@
 						list = new ArrayList<String>();
 						list.add(s2);
 						saveZpList(list);
-						check = "list created";
+						check = "item deleted";
 					} else {
 						FileInputStream fis = new FileInputStream(file);
 						ObjectInputStream ois = new ObjectInputStream(fis);
 						list = (List<String>) ois.readObject();
 						ois.close();
-						check = "list already exists";
+						check = "item deleted";
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -150,13 +150,13 @@
 						list = new ArrayList<String>();
 						list.add(s2);
 						saveZpList(list);
-						check = "list created";
+						check = "list updated";
 					} else {
 						FileInputStream fis = new FileInputStream(file);
 						ObjectInputStream ois = new ObjectInputStream(fis);
 						list = (List<String>) ois.readObject();
 						ois.close();
-						check = "list already exists";
+						check = "list updated";
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
